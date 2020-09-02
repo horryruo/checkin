@@ -1,6 +1,10 @@
 name: Hostloc
  
 on:
+ push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
  
   schedule:
     # 详细cron设置请访问https://crontab.guru
