@@ -1,9 +1,7 @@
 name: Hostloc
  
 on:
- push:
-    branches:
-      - master
+ 
   schedule:
     # 详细cron设置请访问https://crontab.guru
     # 最好修改cron避免大家都在同一时间签到，给服务器造成压力导致签到失败
@@ -21,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - name: Set up Python3.8
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v1
       with:
         python-version: '3.8'
     - name: Install dependencies
